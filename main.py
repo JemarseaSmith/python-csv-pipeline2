@@ -9,12 +9,10 @@ from pipeline import summarize_csv
 
 
 def parse_args():
-    p = argparse.ArgumentParser(
-        description="CSV → JSON data pipeline (starter)")
+    p = argparse.ArgumentParser(description="CSV → JSON data pipeline (starter)")
     p.add_argument("input", help="Input CSV file path")
     p.add_argument("--json", help="Write JSON summary to this file")
-    p.add_argument("--summary", action="store_true",
-                   help="Print summary to stdout")
+    p.add_argument("--summary", action="store_true", help="Print summary to stdout")
     return p.parse_args()
 
 

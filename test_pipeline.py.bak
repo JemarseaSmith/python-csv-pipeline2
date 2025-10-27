@@ -1,5 +1,7 @@
 # tests/test_pipeline.py
 from pipeline import summarize_csv
+import tempfile
+import os
 
 
 def test_summarize_csv_basic(tmp_path):

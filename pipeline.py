@@ -14,10 +14,10 @@ def summarize_csv(path: str) -> Dict[str, Any]:
     Non-numeric values are counted in "non_numeric" field and ignored for numeric stats.
     Returns a dictionary mapping column -> stats dict.
     """
-    with open(path, newline='', encoding='utf-8') as f:
+    with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        numeric_cols = {}        # col -> (sum, count)
-        non_numeric = {}         # col -> count of non-numeric or empty values
+        numeric_cols = {}  # col -> (sum, count)
+        non_numeric = {}  # col -> count of non-numeric or empty values
         # Track columns so columns with only non-numeric values still appear
         seen_columns = []
 
@@ -44,11 +44,7 @@ def summarize_csv(path: str) -> Dict[str, Any]:
             # numeric stats if present
             if col in numeric_cols:
                 s, n = numeric_cols[col]
-                result[col] = {
-                    "count": n,
-                    "sum": s,
-                    "mean": (s / n) if n > 0 else None
-                }
+                result[col] = {"count": n, "sum": s, "mean": (s / n) if n > 0 else None}
             else:
                 result[col] = {}
 
