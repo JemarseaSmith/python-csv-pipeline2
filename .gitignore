@@ -9,3 +9,7 @@ __pycache__/
 Thumbs.db
 # Test / output
 output.json
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
