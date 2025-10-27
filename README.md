@@ -1,3 +1,5 @@
+[![CI](https://github.com/JemarseaSmith/python-csv-pipeline2/actions/workflows/python-tests.yml/badge.svg)](https://github.com/JemarseaSmith/python-csv-pipeline2/actions)
+
 ```markdown
 # python-csv-pipeline
 
